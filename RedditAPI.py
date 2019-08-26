@@ -36,6 +36,7 @@ for submission in reddit.subreddit('mechmarket').hot(limit=200):
         submission_obj = Submission(submission.id,submission.title,submission.comments, submission.URL)
         results.append(submission_obj)
 
+#if any matching results are discovered send url in email
 if len(results) != 0:
         for result in results:
                 Email.send_email(env_sender_email, env_sender_pw, env_reciever_email, 'RedditBot', 'Reddit thread meets requirement: ' + result.url)

@@ -2,7 +2,7 @@ import smtplib
 from smtplib import SMTP
 
 def send_email(user, password, recipient, subject, body):
-
+    #setup variables
     gmail_user = user
     gmail_pwd = password
     FROM = user
@@ -14,6 +14,7 @@ def send_email(user, password, recipient, subject, body):
     message = """From: %s\nTo: %s\nSubject: %s\n\n%s
     """ % (FROM, ", ".join(TO), SUBJECT, TEXT)
 
+    #send message using gmail
     server = smtplib.SMTP("smtp.gmail.com", 587)
     server.ehlo()
     server.starttls()
