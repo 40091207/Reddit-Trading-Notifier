@@ -1,4 +1,4 @@
-#Reddit Trading Notifier
+# Reddit Trading Notifier
 
 Requires [pdotenv](https://pypi.org/project/python-dotenv/), [PRAW](https://praw.readthedocs.io/en/latest/index.html)
 
